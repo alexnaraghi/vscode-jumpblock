@@ -1,0 +1,41 @@
+{
+    "name": "jumpblock",
+    "displayName": "JumpBlock",
+    "description": "Shortcuts to jump through files by whitespace lines.  Faster navigation of functions and logical blocks.",
+    "version": "0.0.1",
+    "publisher": "AlexNaraghi",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:jumpBlock.up",
+        "onCommand:jumpBlock.down"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "jumpBlock.up",
+                "title": "Jump Up Block"
+            },
+            {
+                "command": "jumpBlock.down",
+                "title": "Jump Down Block"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "eslint": "^3.6.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
